@@ -74,20 +74,35 @@ namespace BinarySearchII
         {
             return RootNode;
         }
+
+        // prints the tree
         public void PrintInOrder(Node Root)
         {
             if (Root != null)
             {
                 Console.Write(Root.Data + " ");
                 PrintInOrder(Root.LeftNode);
-                
                 PrintInOrder(Root.RightNode);
             }
         }
+        // prints the left side
         public void PrintLeft(Node Root)
         {
-            Console.Write(Root.Data + " ");
-            PrintLeft(Root.LeftNode);
+            if (Root != null)
+            {
+                Console.Write(Root.Data + " ");
+                PrintLeft(Root.LeftNode);
+               
+            }
+        }
+        // prints the right side
+        public void PrintRight(Node Root)
+        {
+            if (Root != null)
+            {
+                Console.Write(Root.Data + " ");
+                PrintRight(Root.RightNode);
+            }
         }
 
 
