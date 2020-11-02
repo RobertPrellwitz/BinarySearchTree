@@ -84,6 +84,12 @@ namespace BinarySearchII
                 PrintInOrder(Root.RightNode);
             }
         }
+        public void PrintLeft(Node Root)
+        {
+            Console.Write(Root.Data + " ");
+            PrintLeft(Root.LeftNode);
+        }
+
 
         public void SearchTree() 
         {
