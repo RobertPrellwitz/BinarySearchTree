@@ -61,13 +61,7 @@ namespace BinarySearchII
                     }
                 }
                 
-
             }
-
-           
-
-
-
 
         }
         public Node TestRoot()
@@ -106,8 +100,37 @@ namespace BinarySearchII
         }
 
 
-        public void SearchTree() 
+        public Node SearchTree(Node nodeToFind) 
         {
+            if (RootNode != null)
+            {
+                LastNode = RootNode;
+                if (LastNode == nodeToFind)
+                {
+                    return RootNode;
+                }
+                else 
+                {
+                    while (true)
+                    {
+                        if (nodeToFind.Data < LastNode.Data)
+                        {
+                            LastNode = LastNode.LeftNode;
+                            return LastNode;
+
+                        }
+                        else
+                        {
+                            LastNode = LastNode.RightNode;
+                            return LastNode;
+                        }
+                        
+                    }
+                    
+                }
+
+            }
+            return LastNode;
         }
 
     }
